@@ -1,0 +1,54 @@
+//==========================
+// PAGE LOADER
+//==========================
+
+window.addEventListener("load", function(){
+
+    setTimeout(function(){
+
+        let loader = document.getElementById("loader");
+
+        if(loader){
+            loader.style.display = "none";
+        }
+
+    },1000);
+
+});
+
+
+//==========================
+// BACK TO TOP
+//==========================
+
+let topBtn = document.getElementById("topBtn");
+
+window.onscroll = function(){
+
+    if(document.documentElement.scrollTop > 300){
+
+        topBtn.style.display = "flex";
+
+    }else{
+
+        topBtn.style.display = "none";
+
+    }
+
+};
+
+
+if(topBtn){
+
+    topBtn.onclick = function(){
+
+        window.scrollTo({
+
+            top:0,
+            behavior:"smooth"
+
+        });
+
+    };
+
+}
